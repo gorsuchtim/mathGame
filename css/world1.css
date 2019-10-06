@@ -1,0 +1,10 @@
+/*----------------------
+World 1 styles
+----------------------*/
+
+.dynamicText {
+    color: rgba(0,255,0,1);
+}
+.dynamicBorderColor {
+    border-color: rgba(0,255,0,1);
+}

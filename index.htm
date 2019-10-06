@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Math 2.2</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="author" content="Tim Gorsuch">
+    <!-- favicon icon  -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="icon" href="" type="image/x-icon">
+    <!-- fonts! -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" id="dynamicCSS" href="">
+</head>
+
+<body>
+    <div class="mainMathContainer">
+        <div class="welcomeIntro mathSequenceContainer">
+            <div class="welcomeInfo"></div>
+            <div class="introRingContainer">
+                <div class="introRing introRing1">
+                    <h1 class="introPlay">Play</h1>
+                </div>
+                <div class="introRing introRing2"></div>
+                <div class="introRing introRing3"></div>
+                <div class="introRing introRing4"></div>
+                <div class="introRing introRing5"></div>
+                <div class="introRing introRing6"></div>
+                <div class="introRing introRing7"></div>
+                <div class="introRing introRing8"></div>
+                <div class="introRing introRing9"></div>
+                <div class="introRing introRing10"></div>
+                <div class="introRing introRing11"></div>
+            </div>
+            <div class="mathSequenceContainer learnMore offScreenTop">
+                <div class="learnMoreInner ">
+                    <h1>Learn more here</h1>
+                    <p>Lorem ipsum dolor sit amet, at eos magna movet. Vim ne doming dignissim maiestatis. Sea malorum efficiendi
+                        eu, semper fabellas vim at. Mei no feugait splendide, omnium verterem voluptatibus mei ne. Quo postulant
+                        liberavisse no, vis eirmod persecuti assueverit te, habeo harum choro mei et. Mei dicat scripta eu,
+                        te eum diam possit voluptua.</p>
+                    <p>Vix legere menandri mediocritatem id. Fierent incorrupte ad mei, an quo novum graeco deseruisse, ut ius
+                        albucius explicari. Ius simul tritani accusam eu, ne ipsum voluptatum referrentur eum.</p>
+                </div>
+                <button class="mathButton" id="backToTitle">Back</button>
+            </div>
+        </div>
+        <div class="mathSequenceContainer addSubtract offScreenLeft ">
+            <div class="welcomeInner">
+                <h3 class="">Add | Subtract | Multiply</h3>
+                <div class="mathCheckboxWrap addSubtractChoice">
+                    <div class="mathCheckbox choiceBox" id="add">
+                        <h1>+</h1>
+                    </div>
+                    <div class="mathCheckbox choiceBox" id="subtract">
+                        <h1>-</h1>
+                    </div>
+                    <div class="mathCheckbox choiceBox" id="multiply">
+                        <h1>x</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mathSequenceContainer mathRange offScreenRight">
+            <div class="welcomeInner">
+                <h3 class="">To 10 | To 20 | To 100</h3>
+                <div class="mathCheckboxWrap rangeChoice">
+                    <div class="mathCheckbox rangeBox" id="to10">
+                        <h2>10</h2>
+                    </div>
+                    <div class="mathCheckbox rangeBox" id="to20">
+                        <h2>20</h2>
+                    </div>
+                    <div class="mathCheckbox rangeBox" id="to100">
+                        <h2>100</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mathSequenceContainer levelDifficulty offScreenTop">
+            <h3 class="">Beginner | Novice | Expert</h3>
+            <div class="mathCheckboxWrap difficultyChoices">
+                <div class="mathCheckbox difficultyChoice" id="beginner">
+                    <h2>B</h2>
+                </div>
+                <div class="mathCheckbox difficultyChoice" id="novice">
+                    <h2>N</h2>
+                </div>
+                <div class="mathCheckbox difficultyChoice" id="expert">
+                    <h2>E</h2>
+                </div>
+            </div>
+        </div>
+        <div class="mathSequenceContainer worldIntroContainer offScreenRight">
+            <div class="worldIntroSpans">
+                <span class="worldIntroText worldWelcome welcomeTo flippedText">W</span>
+                <span class="worldIntroText worldWelcome welcomeTo flippedText">e</span>
+                <span class="worldIntroText worldWelcome welcomeTo flippedText">l</span>
+                <span class="worldIntroText worldWelcome welcomeTo flippedText">c</span>
+                <span class="worldIntroText worldWelcome welcomeTo flippedText">o</span>
+                <span class="worldIntroText worldWelcome welcomeTo flippedText">m</span>
+                <span class="worldIntroText worldWelcome welcomeTo flippedText worldIntroWordEnd">e</span>
+                <span class="worldIntroText worldWelcome welcomeTo flippedText">t</span>
+                <span class="worldIntroText worldWelcome welcomeTo flippedText worldIntroWordEnd">o</span>
+                <span class="worldIntroText worldWelcome flippedText">W</span>
+                <span class="worldIntroText worldWelcome flippedText">o</span>
+                <span class="worldIntroText worldWelcome flippedText">r</span>
+                <span class="worldIntroText worldWelcome flippedText">l</span>
+                <span class="worldIntroText worldWelcome flippedText worldIntroWordEnd">d</span>
+                <span class="worldIntroText worldWelcome flippedText worldIntroNumber"></span>
+            </div>
+            <div class="worldIntroSpans1 worldIntroSpans">
+                <span class="worldIntroText worldReqSpans flippedText dynamicWorldNumber"></span>
+                <span class="worldIntroText worldReqSpans flippedText checkmarkSpan"><img src="images/checkmark-white.png" alt=""></span>
+                <span class="worldIntroText worldReqSpans flippedText worldIntroEqual">&#61;</span>
+                <span class="worldIntroText worldReqSpans flippedText worldIntroRing spinMed"></span>
+            </div>
+        </div>
+    </div>
+    <div class="mathSequenceContainer mathGameContainer offScreen">
+        <div class="ringContainer offScreen">
+            <div class="pointsContainer">
+                <p id="highScore">High: 0</p>
+                <p class="dynamicText" id="userPoints">P: 0</p>
+                <p id="userChances"></p>
+            </div>
+            <div class="ring ring1">
+                <div id="timerContainer">
+                    <div class="dynamicText" id="timer"></div>
+                </div>
+            </div>
+            <div class="ring ring2"></div>
+            <div class="ring ring3"></div>
+            <div class="ring ring4"></div>
+            <div class="ring ring5"></div>
+            <div class="ring ring6"></div>
+            <div class="ring ring7"></div>
+            <div class="ring ring8"></div>
+            <div class="ring ring9"></div>
+            <div class="ring ring10"></div>
+            <div class="ring ring11"></div>
+        </div>
+        <div class="mathGameBoard offScreen">
+            <div class="gameContentWrap">
+                <ul>
+                    <li id="firstNumber"></li>
+                    <li id="operator"></li>
+                    <li id="secondNumber"></li>
+                </ul>
+                <div class="mathCheckboxWrap multipleChoice">
+                    <div class="mathCheckbox choices">
+                        <h4></h4>
+                    </div>
+                    <div class="mathCheckbox choices">
+                        <h4></h4>
+                    </div>
+                    <div class="mathCheckbox choices">
+                        <h4></h4>
+                    </div>
+                </div>
+                <div class="mathPoints">
+                    <h1 id="rightAnswers">0</h1>
+                    <h1 class="dynamicText" id="answersNeeded"></h1>
+                </div>
+            </div>
+            <div class="pointsTallyWrap">
+                <p class="tallyText" id="ringsEarned"></p>
+                <p class="tallyText" id="timeLeft"></p>
+                <p class="tallyText" id="chancesLeft"></p>
+                <p class="tallyText dynamicText" id="totalTally"></p>
+                <button class="tallyText mathButton" id="nextLevel"></button>
+            </div>
+        </div>
+    </div>
+    <div class="mathSequenceContainer gameOverContainer offScreen">
+        <div class="gameOverSpans">
+            <span class="dynamicText gameOverText flippedText">G</span>
+            <span class="dynamicText gameOverText flippedText">a</span>
+            <span class="dynamicText gameOverText flippedText">m</span>
+            <span class="dynamicText gameOverText flippedText gameOverWordEnd">e</span>
+            <span class="dynamicText gameOverText flippedText">O</span>
+            <span class="dynamicText gameOverText flippedText">v</span>
+            <span class="dynamicText gameOverText flippedText">e</span>
+            <span class="dynamicText gameOverText flippedText">r</span>
+        </div>
+        <div class="scoreResults">
+            <h3 class="score finalHighScore"></h3>
+            <h3 class="score dynamicText finalScore"></h3>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js "></script>
+    <script type="text/javascript " src="js/main.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,813 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+}
+
+.mainMathContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: rgba(80, 80, 80, 0.8);
+    background-color: white;
+}
+
+.mathSequenceContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    transition: all 1s linear;
+}
+
+
+/*--------------------------
+Learn more container 
+-------------------------*/
+
+.learnMore {
+    top: 0;
+    left: 0;
+    -webkit-display: flex;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: rgba(80, 80, 80, 0.8);
+}
+
+.learnMoreInner {
+    width: 50%;
+}
+
+.learnMore h1 {
+    color: rgba(0, 255, 0, 1);
+}
+
+.learnMoreInner p {
+    margin: 1em 0;
+}
+
+
+/*-------------------------
+Welcome intro animation
+-----------------------------------*/
+
+.welcomeIntro {
+    color: rgba(80, 80, 80, 0.8);
+    -webkit-display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcomeInfo {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    background-image: url('../images/infoIcon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/*---------------------------------
+Welcome container sequence screens
+------------------------------------*/
+
+.welcomeInner {
+    width: 100%;
+    height: 100%;
+    -webkit-display: flex;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 255, 0, 1);
+}
+
+.addSubtract {
+    left: 0;
+}
+
+.mathRange {
+    right: 0;
+}
+
+.levelDifficulty {
+    top: 0;
+    left: 0;
+    -webkit-display: flex;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 255, 0, 1);
+}
+#mobileWorldIntroContainer {
+    display: none;
+}
+
+.worldIntroContainer {
+    top: 0;
+    right: 0;
+    -webkit-display: flex;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.worldIntroSpans {
+    margin-bottom: 1.5em;
+    -webkit-display: flex;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 10px 10px rgba(80, 80, 80, 0.8);
+}
+
+.worldIntroText {
+    opacity: 0;
+    font-size: 3em;
+    margin-right: 0.25em;
+    transition: all 0.5s linear;
+}
+
+.worldIntroWordEnd {
+    margin-right: 1em;
+}
+
+.checkmarkSpan img {
+    width: 1em;
+    height: 1em;
+}
+
+.worldIntroEqual {
+    margin: 0 0.5em;
+}
+
+.worldIntroRing {
+    margin-left: 0.4em;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    border: 2px solid white;
+    border-right: 2px solid transparent;
+}
+
+#world1Intro {
+    background-color: rgba(0, 255, 0, 1);
+}
+
+#world2Intro {
+    background-color: rgba(45, 167, 227, 1);
+}
+
+#world3Intro {
+    background-color: rgba(255, 121, 0, 1);
+}
+
+#world4Intro {
+    background-color: rgba(255, 93, 233, 1);
+}
+
+#world5Intro {
+    background-color: rgba(238, 255, 0, 1);
+}
+
+#world6Intro {
+    background-color: rgba(0, 249, 255, 1);
+}
+
+
+/*-----------------------
+Math Gameboard Styles
+-----------------------*/
+
+.mathGameContainer {
+    color: rgba(80, 80, 80, 0.8);
+    top: 0;
+    left: 0;
+}
+
+#timerContainer {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+}
+
+#timer {
+    font-family: 'Oswald', sans-serif;
+    font-size: 7em;
+}
+
+.mathGameBoard {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.gameContentWrap ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameContentWrap li {
+    list-style: none;
+    color: rgba(80, 80, 80, 0.8);
+    font-size: 2.5em;
+}
+
+.gameContentWrap {
+    z-index: 2;
+}
+
+#operator {
+    margin: 0 0.5em;
+}
+
+.multipleChoice {
+    margin-top: 1em;
+    position: relative;
+}
+
+.mathPoints {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75em;
+}
+
+.pointsContainer {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    font-size: 2.1em;
+    color: rgba(80, 80, 80, 0.5);
+}
+
+#userChances {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+#rightAnswers {
+    color: rgba(80, 80, 80, 0.4);
+    margin: 0 0.25em;
+}
+
+#answersNeeded {
+    margin: 0 0.25em;
+}
+
+
+/*-------------------
+Points tally screen
+----------------------*/
+
+.pointsTallyWrap {
+    display: none;
+    text-align: center;
+    transition: all 1s linear;
+}
+
+.pointsTallyWrap p {
+    font-size: 1.5em;
+}
+
+.tallyText {
+    opacity: 0;
+    margin-bottom: 0.5em;
+    transition: all 0.5s linear;
+}
+
+
+/*------------------
+ Checkbox Styles 
+ -------------------*/
+
+.mathCheckboxWrap {
+    -webkit-display: flex;
+    display: flex;
+    justify-content: center;
+}
+
+.mathCheckbox {
+    margin: 0.75em;
+    border: 2px solid rgba(80, 80, 80, 0.8);
+    color: rgba(80, 80, 80, 0.8);
+    border-radius: 15%;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.addSubtractChoice .mathCheckbox {
+    padding: 1em 1.75em;
+}
+
+.rangeChoice .mathCheckbox {
+    padding: 1.35em 1em;
+}
+
+#beginner,
+#novice,
+#expert {
+    padding: 1em 1.75em;
+}
+
+.multipleChoice .mathCheckbox {
+    padding: 1.25em 1.5em;
+}
+
+.mathButton {
+    padding: 1em;
+    border: 1px solid rgba(80, 80, 80, 0.8);
+    color: rgba(80, 80, 80, 0.8);
+    background-color: transparent;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+
+/*-----------------------
+Game over screen styles
+------------------------*/
+
+.gameOverContainer {
+    -webkit-display: flex;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+.gameOverSpans {
+    -webkit-display: flex;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameOverText {
+    opacity: 0;
+    font-size: 2em;
+    margin-right: 0.25em;
+    transition: all 0.5s linear;
+}
+
+.gameOverWordEnd {
+    margin-right: 1em;
+}
+
+.scoreResults {
+    -webkit-display: flex;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreResults {
+    margin-top: 0.25em;
+    color: rgba(80, 80, 80, 0.8);
+    font-size: 1.5em;
+    transition: all 0.5s linear;
+}
+
+
+/*---------------------
+Ring container styles
+----------------------*/
+
+.introPlay h1 {
+    opacity: 0;
+    cursor: pointer;
+    transition: all 1s linear;
+}
+
+
+.introRing {
+    position: absolute;
+    border: 3px inset;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.ringContainer,
+.introRingContainer {
+    -webkit-display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.introRingContainer {
+  cursor: pointer;
+}
+
+.ring {
+    position: absolute;
+    border: 3px inset;
+    border-radius: 50%;
+    transition: all 1s linear;
+    opacity: 0;
+}
+
+.ring1,
+.introRing1 {
+    height: 20em;
+    width: 20em;
+    opacity: 1;
+}
+
+.introRing1 {
+    transition: all 1.5s linear;
+}
+
+.introRing1 {
+    -webkit-display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ring2,
+.introRing2 {
+    height: 22em;
+    width: 22em;
+}
+
+.ring3,
+.introRing3 {
+    height: 24em;
+    width: 24em;
+}
+
+.ring4,
+.introRing4 {
+    height: 26em;
+    width: 26em;
+}
+
+.ring5,
+.introRing5 {
+    height: 28em;
+    width: 28em;
+}
+
+.ring6,
+.introRing6 {
+    height: 30em;
+    width: 30em;
+}
+
+.ring7,
+.introRing7 {
+    height: 32em;
+    width: 32em;
+}
+
+.ring8,
+.introRing8 {
+    height: 34em;
+    width: 34em;
+}
+
+.ring9,
+.introRing9 {
+    height: 36em;
+    width: 36em;
+}
+
+.ring10,
+.introRing10 {
+    height: 38em;
+    width: 38em;
+}
+
+.ring11,
+.introRing11 {
+    height: 40em;
+    width: 40em;
+}
+
+
+.introRingGreenBorder {
+    border-color: rgba(0, 255, 0, 1);
+}
+/*---------------------
+Utility classes
+---------------------*/
+
+.offScreen {
+    display: none;
+}
+
+.offScreenLeft {
+    left: -2000px;
+}
+
+.offScreenTop {
+    top: -1000px;
+}
+
+.offScreenRight {
+    right: -2000px;
+}
+
+.mathSelected {
+    border-radius: 5px;
+    border-color: rgba(80, 80, 80, 0.8);
+    color: white;
+    background-color: rgba(80, 80, 80, 0.8);
+}
+
+.displayInline {
+    display: inline;
+}
+
+.showing {
+    opacity: 1;
+}
+
+.flippedText {
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+.success {
+    background-image: url('../images/checkmark.png');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tryAgain {
+    background-image: url('http://www.climatecentral.org/wgts/mapping-choices/img/black-x.png');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: transparent;
+}
+
+
+/*--------------------
+Spin styles and flipped text styles and animation
+--------------------------*/
+
+.pulse {
+    -webkit-animation: pulse 1s 1 ease-in-out;
+    animation: pulse 1s 1 ease-in-out;
+}
+
+.bigPulse {
+    -webkit-animation: bigPulse 1s 1 ease-in-out;
+    animation: bigPulse 1s 1 ease-in-out;
+}
+
+.spinSlow {
+    -webkit-animation: spin 5s infinite linear;
+    animation: spin 5s infinite linear;
+}
+
+.spinMed {
+    -webkit-animation: spin 3s infinite linear;
+    animation: spin 3s infinite linear;
+}
+
+.spinFast {
+    -webkit-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
+}
+
+.spinVert {
+    -webkit-animation: spinVert 5s infinite linear;
+    animation: spinVert 5s infinite linear;
+}
+
+-webkit-@keyframes pulse {
+    from {
+        -webkit-transform: scale(1.5);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+-webkit-@keyframes bigPulse {
+    from {
+        -webkit-transform: scale(2);
+    }
+    to {
+        -webkit-transform: scale(2);
+    }
+}
+
+@keyframes bigPulse {
+    from {
+        transform: scale(3);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes spinVert {
+    0% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: rotateX(360deg);
+        transform: rotateX(360deg);
+    }
+}
+
+@keyframes spinVert {
+    0% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: rotateX(360deg);
+        transform: rotateX(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/*----------------------
+Responsive styles - mobile
+----------------------------*/
+@media screen and (max-width: 525px) {
+   .learnMoreInner {
+       width: 80%;
+   }
+   .welcomeInner h3, .levelDifficulty h3 {
+        font-size: 1.75em;
+   }
+    .mathGameBoard {
+        top: 10%;
+    }
+    .gameContentWrap {
+        margin-top: -36%;
+    }
+    .pointsTallyWrap {
+        margin-top: -36%;
+    }
+    .worldIntroWordEnd {
+        margin-right: 0.5em;
+    }
+    .welcomeTo {
+        display: none;
+    }
+   .pointsContainer {
+    top: 2%;
+    left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.75em;
+  }
+  #timer { 
+    font-size: 4em;
+}
+  .ring {
+      position: absolute;
+      border: 3px inset;
+      border-radius: 50%;
+      transition: all 1s linear;
+      opacity: 0;
+  }
+
+  .ring1,
+  .introRing1 {
+      height: 8em;
+      width: 8em;
+      opacity: 1;
+  }
+
+  .ring2,
+  .introRing2 {
+      height: 10em;
+      width: 10em;
+  }
+
+  .ring3,
+  .introRing3 {
+      height: 12em;
+      width: 12em;
+  }
+
+  .ring4,
+  .introRing4 {
+      height: 14em;
+      width: 14em;
+  }
+
+  .ring5,
+  .introRing5 {
+      height: 16em;
+      width: 16em;
+  }
+
+  .ring6,
+  .introRing6 {
+      height: 18em;
+      width: 18em;
+  }
+
+  .ring7,
+  .introRing7 {
+      height: 20em;
+      width: 20em;
+  }
+
+  .ring8,
+  .introRing8 {
+      height: 22em;
+      width: 22em;
+  }
+
+  .ring9,
+  .introRing9 {
+      height: 24em;
+      width: 24em;
+  }
+
+  .ring10,
+  .introRing10 {
+      height: 26em;
+      width: 26em;
+  }
+
+  .ring11,
+  .introRing11 {
+      height: 28em;
+      width: 28em;
+  }
+}
